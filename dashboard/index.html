@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Progress Over Perfection · Dashboard</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="top-bar">
+    <div class="brand">
+      <div class="logo">PO</div>
+      <div class="brand-text">
+        <span class="brand-name">Progress</span>
+        <span class="brand-subtitle">Over Perfection</span>
+      </div>
+    </div>
+    <button class="menu-toggle" aria-expanded="false" aria-controls="main-menu">
+      <span class="sr-only">Open main menu</span>
+      <span class="menu-line"></span>
+      <span class="menu-line"></span>
+      <span class="menu-line"></span>
+    </button>
+    <nav class="menu" id="main-menu" aria-label="Main menu">
+      <h2>Main Menu</h2>
+      <ul>
+        <li><a href="#" class="active">Dashboard</a></li>
+        <li><a href="#">Focus Areas</a></li>
+        <li><a href="#">Journal</a></li>
+        <li><a href="#">Community</a></li>
+        <li><a href="#">Progress</a></li>
+        <li><a href="#">Coach Chat</a></li>
+        <li><a href="#">Settings</a></li>
+      </ul>
+    </nav>
+    <div class="menu-backdrop" hidden></div>
+    <div class="top-actions">
+      <button class="icon-button" aria-label="Notifications">
+        <span class="icon">🔔</span>
+      </button>
+      <button class="icon-button" aria-label="Messages">
+        <span class="icon">💬</span>
+      </button>
+      <button class="avatar" aria-label="Account">
+        <span>JD</span>
+      </button>
+    </div>
+  </header>
+
+  <main class="dashboard">
+    <section class="welcome">
+      <div class="welcome-text">
+        <p class="greeting">Welcome Back, Jodee!</p>
+        <h1>Here's your progress overview for today</h1>
+      </div>
+      <div class="inspiration">
+        <p class="label">Your daily inspiration</p>
+        <blockquote>
+          <p>"From caterpillar to butterfly, the most important changes happen in the cocoon."</p>
+        </blockquote>
+      </div>
+    </section>
+
+    <section class="cards">
+      <article class="card highlight">
+        <header>
+          <h2>Today's Focus</h2>
+          <span class="status success">100% Complete</span>
+        </header>
+        <p class="task">Test: Actual Goal OyqkwN</p>
+        <div class="progress">
+          <div class="progress-bar" style="width: 100%"></div>
+        </div>
+        <button class="primary-button">View Focus Plan</button>
+      </article>
+
+      <article class="card">
+        <header>
+          <h2>Gratitude Streak</h2>
+          <span class="streak-count">4 days</span>
+        </header>
+        <p class="streak-note">Keep it going!</p>
+        <button class="secondary-button">Add Today's Entry</button>
+      </article>
+
+      <article class="card">
+        <header>
+          <h2>Upcoming</h2>
+        </header>
+        <p class="event-title">Team Meeting</p>
+        <p class="event-time">Today · 2:00 PM</p>
+        <button class="secondary-button">View Calendar</button>
+      </article>
+
+      <article class="card">
+        <header>
+          <h2>Community</h2>
+        </header>
+        <p class="community-member">Khavlingston7</p>
+        <p class="community-note">Shared a reflection</p>
+        <div class="action-row">
+          <button class="link-button">View All</button>
+          <button class="secondary-button">Reply</button>
+        </div>
+      </article>
+
+      <article class="card">
+        <header>
+          <h2>Progress Stats</h2>
+        </header>
+        <ul class="stats">
+          <li>
+            <span class="label">Active Goals</span>
+            <span class="value">3</span>
+          </li>
+          <li>
+            <span class="label">Completed</span>
+            <span class="value">15</span>
+          </li>
+          <li>
+            <span class="label">Missed Sessions</span>
+            <span class="value warning">1</span>
+          </li>
+        </ul>
+      </article>
+
+      <article class="card">
+        <header>
+          <h2>Book a Session</h2>
+        </header>
+        <p class="session-copy">Schedule a one-on-one coaching session with Natasha.</p>
+        <button class="primary-button">Book Now</button>
+      </article>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
