@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Progress Over Perfection – Admin Portal</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:wght@400;500"
+    />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="top-bar">
+        <div class="top-bar__left">
+          <div class="brand">Welcome, <span>ProgressAdmin</span></div>
+        </div>
+        <nav class="top-bar__icons" aria-label="Quick actions">
+          <button class="icon-button" aria-label="Dashboard home">
+            <span class="material-symbols-rounded material-icon">home</span>
+          </button>
+          <button class="icon-button" aria-label="Notifications">
+            <span class="material-symbols-rounded material-icon">notifications</span>
+          </button>
+          <button class="icon-button" aria-label="Calendar">
+            <span class="material-symbols-rounded material-icon">event</span>
+          </button>
+          <button class="icon-button" aria-label="Settings">
+            <span class="material-symbols-rounded material-icon">settings</span>
+          </button>
+        </nav>
+      </header>
+
+      <main class="content">
+        <section class="intro">
+          <h1>Admin Panel</h1>
+          <p>Manage user accounts and view client progress.</p>
+        </section>
+
+        <section class="grid" aria-label="Admin actions">
+          <article class="card card--create" aria-labelledby="create-user-title">
+            <header class="card__header">
+              <h2 id="create-user-title">Create New User</h2>
+              <p>Add a new account to the system</p>
+            </header>
+            <form id="create-user-form" class="form">
+              <label class="form__field">
+                <span>Username</span>
+                <input
+                  type="text"
+                  name="username"
+                  placeholder="Enter username"
+                  required
+                />
+              </label>
+              <label class="form__field">
+                <span>Password</span>
+                <input
+                  type="password"
+                  name="password"
+                  placeholder="Enter password"
+                  required
+                />
+              </label>
+              <button type="submit" class="button">Create User</button>
+              <p class="form__message" id="form-message" role="status" aria-live="polite"></p>
+            </form>
+          </article>
+
+          <article class="card card--users" aria-labelledby="users-title">
+            <header class="card__header">
+              <h2 id="users-title">
+                All Users
+                <span class="count" id="user-count" aria-live="polite"></span>
+              </h2>
+              <p>Registered user accounts</p>
+            </header>
+            <ul class="user-list" id="user-list"></ul>
+          </article>
+        </section>
+
+        <section class="card card--overview" aria-labelledby="overview-title">
+          <header class="card__header">
+            <h2 id="overview-title">Client Overview</h2>
+            <p>View client activity and progress statistics</p>
+          </header>
+          <div class="overview" id="overview"></div>
+        </section>
+      </main>
+    </div>
+
+    <template id="user-list-item-template">
+      <li class="user-list__item">
+        <div class="user-list__info">
+          <span class="user-list__name"></span>
+          <span class="user-list__role"></span>
+        </div>
+        <span class="user-list__meta"></span>
+      </li>
+    </template>
+
+    <template id="overview-card-template">
+      <article class="overview-card">
+        <div class="overview-card__header">
+          <h3 class="overview-card__name"></h3>
+        </div>
+        <dl class="overview-card__stats">
+          <div class="overview-card__stat">
+            <span class="overview-card__icon" aria-hidden="true">🎯</span>
+            <dt>Goals</dt>
+            <dd class="overview-card__goals"></dd>
+          </div>
+          <div class="overview-card__stat">
+            <span class="overview-card__icon" aria-hidden="true">🤍</span>
+            <dt>Gratitude</dt>
+            <dd class="overview-card__gratitude"></dd>
+          </div>
+          <div class="overview-card__stat">
+            <span class="overview-card__icon" aria-hidden="true">📓</span>
+            <dt>Journal</dt>
+            <dd class="overview-card__journal"></dd>
+          </div>
+        </dl>
+      </article>
+    </template>
+
+    <script src="script.js"></script>
+  </body>
+</html>
