@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gratitude & Journal</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="app-header">
+        <div class="brand">Progress Over Perfection</div>
+        <div class="header-actions">
+          <span class="icon" aria-hidden="true">🔔</span>
+          <span class="icon" aria-hidden="true">⚙️</span>
+          <span class="icon" aria-hidden="true">❔</span>
+          <div class="user-chip">
+            <span class="user-avatar" aria-hidden="true">J</span>
+            <span class="user-name">Welcome, 3doe</span>
+          </div>
+        </div>
+      </header>
+
+      <main class="page">
+        <section class="page-header">
+          <div>
+            <h1>Gratitude &amp; Journal</h1>
+            <p>Reflect on your blessings and document your journey</p>
+          </div>
+          <div class="streak-cards">
+            <div class="streak-card" aria-live="polite">
+              <span class="streak-icon" aria-hidden="true">🔥</span>
+              <div class="streak-text">
+                <strong class="streak-value" id="streak-days">0 day streak</strong>
+                <span class="streak-caption">Keep the momentum going!</span>
+              </div>
+            </div>
+            <div class="streak-card" aria-live="polite">
+              <span class="streak-icon" aria-hidden="true">📝</span>
+              <div class="streak-text">
+                <strong class="streak-value" id="entries-week">0 entries this week</strong>
+                <span class="streak-caption">You're building a habit</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="tabs" role="tablist" aria-label="Gratitude and journal modes">
+          <button class="tab-button is-active" role="tab" aria-selected="true" aria-controls="gratitude-panel" id="gratitude-tab">
+            Daily Gratitude
+          </button>
+          <button class="tab-button" role="tab" aria-selected="false" aria-controls="journal-panel" id="journal-tab">
+            Journal
+          </button>
+          <button class="tab-button" role="tab" aria-selected="false" aria-controls="history-panel" id="history-tab">
+            History
+          </button>
+        </section>
+
+        <section id="gratitude-panel" class="tab-panel is-active" role="tabpanel" aria-labelledby="gratitude-tab">
+          <header class="panel-header">
+            <h2>What progress did you make today, no matter how small?</h2>
+            <p>Capture your daily gratitude moments</p>
+          </header>
+          <form class="entry-form" id="gratitude-form">
+            <label class="visually-hidden" for="gratitude-entry">Gratitude entry</label>
+            <textarea id="gratitude-entry" name="gratitude-entry" placeholder="I'm grateful for..." required></textarea>
+            <button type="submit" class="primary-button">Save Gratitude</button>
+          </form>
+        </section>
+
+        <section id="journal-panel" class="tab-panel" role="tabpanel" aria-labelledby="journal-tab" hidden>
+          <header class="panel-header">
+            <h2>What area of your life are you most proud of developing?</h2>
+            <p>Take time for deeper reflection</p>
+          </header>
+          <form class="entry-form" id="journal-form">
+            <label class="visually-hidden" for="journal-entry">Journal entry</label>
+            <textarea id="journal-entry" name="journal-entry" placeholder="Start your journal entry..." required></textarea>
+            <button type="submit" class="primary-button">Save Entry</button>
+          </form>
+        </section>
+
+        <section id="history-panel" class="tab-panel" role="tabpanel" aria-labelledby="history-tab" hidden>
+          <header class="panel-header">
+            <h2>Your Journey</h2>
+            <p>Review your past gratitude and journal entries</p>
+          </header>
+          <ul class="history-list" id="history-list" aria-live="polite"></ul>
+        </section>
+      </main>
+    </div>
+
+    <template id="history-item-template">
+      <li class="history-item">
+        <div class="history-item-icon" aria-hidden="true"></div>
+        <div class="history-item-body">
+          <div class="history-item-header">
+            <span class="history-item-type"></span>
+            <time class="history-item-time" datetime=""></time>
+          </div>
+          <p class="history-item-text"></p>
+        </div>
+      </li>
+    </template>
+
+    <script src="app.js" defer></script>
+  </body>
+</html>
