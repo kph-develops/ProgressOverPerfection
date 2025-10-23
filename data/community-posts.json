@@ -1,0 +1,23 @@
+[
+  {
+    "id": "db-001",
+    "author": "KHurlington",
+    "initials": "KH",
+    "message": "<3",
+    "createdAt": "2024-04-05T09:30:00.000Z"
+  },
+  {
+    "id": "db-002",
+    "author": "Jdoe",
+    "initials": "JD",
+    "message": "Dashboard test post from Jdoe",
+    "createdAt": "2024-04-05T07:15:00.000Z"
+  },
+  {
+    "id": "db-003",
+    "author": "Coach L",
+    "initials": "CL",
+    "message": "Remember to celebrate small wins today!",
+    "createdAt": "2024-04-04T17:45:00.000Z"
+  }
+]
