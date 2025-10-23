@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Community Forum • Progress Over Perfection</title>
+    <link rel="stylesheet" href="assets/css/community.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="top-bar" aria-label="Main navigation">
+        <div class="top-bar__left">
+          <button class="icon-button" aria-label="Open navigation menu">
+            <span aria-hidden="true">☰</span>
+          </button>
+          <div class="welcome">
+            <span class="welcome__greeting">Welcome,</span>
+            <span class="welcome__user" id="userName">Guest</span>
+          </div>
+        </div>
+        <nav class="top-bar__actions" aria-label="Utility actions">
+          <button class="icon-button" aria-label="Open notifications">
+            <span aria-hidden="true">🔔</span>
+          </button>
+          <button class="icon-button" aria-label="Open settings">
+            <span aria-hidden="true">⚙️</span>
+          </button>
+          <button class="icon-button" aria-label="Toggle theme">
+            <span aria-hidden="true">🌗</span>
+          </button>
+        </nav>
+      </header>
+
+      <main class="page" id="communityPage">
+        <section class="page-header">
+          <h1>Community Forum</h1>
+          <p>Connect with others on their journey of growth and transformation.</p>
+        </section>
+
+        <section class="composer" aria-labelledby="communityComposerTitle">
+          <header class="composer__header">
+            <h2 id="communityComposerTitle">Share with the Community</h2>
+            <p class="composer__subtitle">
+              Share your thoughts with the community...
+            </p>
+          </header>
+          <form id="postForm" class="composer__form" autocomplete="off">
+            <label for="postMessage" class="sr-only">Message</label>
+            <textarea
+              id="postMessage"
+              name="message"
+              placeholder="Share your thoughts with the community..."
+              rows="4"
+              required
+            ></textarea>
+            <div class="composer__actions">
+              <button type="submit" class="primary-button">
+                <span aria-hidden="true">💬</span>
+                <span>Share Post</span>
+              </button>
+            </div>
+          </form>
+        </section>
+
+        <section class="posts" aria-labelledby="communityPostsTitle">
+          <header class="posts__header">
+            <h2 id="communityPostsTitle">Community Posts</h2>
+            <p class="posts__subtitle">Latest updates from everyone in the community.</p>
+          </header>
+          <div id="postsList" class="posts__list" role="feed" aria-live="polite"></div>
+        </section>
+      </main>
+    </div>
+
+    <template id="postTemplate">
+      <article class="post" role="article">
+        <div class="post__avatar" aria-hidden="true"></div>
+        <div class="post__content">
+          <header class="post__meta">
+            <div>
+              <span class="post__author"></span>
+              <span class="post__timestamp"></span>
+            </div>
+          </header>
+          <p class="post__message"></p>
+        </div>
+      </article>
+    </template>
+
+    <script src="assets/js/community.js" type="module"></script>
+  </body>
+</html>

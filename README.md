@@ -22,12 +22,28 @@ This repository may contain multiple languages and tools. See each project or di
 
 1. Clone the repo:
 
-```
-git clone https://github.com/kph-develops/ProgressOverPerfection.git
-cd ProgressOverPerfection
-```
+   ```
+   git clone https://github.com/kph-develops/ProgressOverPerfection.git
+   cd ProgressOverPerfection
+   ```
 
 2. Explore the folders and look for per-project README files for specific setup and usage instructions.
+
+## Community Forum prototype
+
+The `community.html` page provides a static prototype of the Community Forum experience where users can share updates and browse historical posts. To try it locally:
+
+1. Open `community.html` directly in a browser, or serve the repository from a lightweight static server:
+
+   ```bash
+   python -m http.server
+   ```
+
+2. Visit `http://localhost:8000/community.html`.
+
+3. Submit a message in the "Share with the Community" composer—new posts are persisted to `localStorage` so they remain on refresh.
+
+The initial list of posts is loaded from `data/community-posts.json`, falling back to seeded entries if the JSON cannot be fetched.
 
 ## Contributing
 
