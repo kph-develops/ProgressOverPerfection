@@ -27,7 +27,15 @@ git clone https://github.com/kph-develops/ProgressOverPerfection.git
 cd ProgressOverPerfection
 ```
 
-2. Explore the folders and look for per-project README files for specific setup and usage instructions.
+2. Install dependencies and start the Goals UI (requires Node.js 18+):
+
+```
+cd frontend
+npm install
+npm run dev
+```
+
+3. Explore the folders and look for per-project README files for specific setup and usage instructions.
 
 ## Contributing
 
